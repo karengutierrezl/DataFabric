@@ -15,13 +15,9 @@ def run_app():
 
         if st.session_state.clicked:
             user_info = valida(user_name)
-            if user_info == None:
-                "El usuario tiene acceso"
-                return False
-            else:
-                #st.title("::eye::bee::m: Bienvenido " + user_name + "a l Consumo de Datos! ")
-                # st.write(" Tus Columnas válidas son: " + colValidas)
-                return True
+            if user_info is None:
+                "El usuario No tiene acceso"
+
 
     if user_info:
         st.text(user_info)
